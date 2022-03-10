@@ -33,6 +33,20 @@ class DFA:
         return result
 
     #
+    # Trap States
+    #
+    def traps(self):
+        """Returns a list of trap states"""
+        allTraps = []
+        for state in self.getStates():
+
+            # trap if all transitions lead to itself
+            if [state for i in range(len(state.getTransitions().values()))]\
+                    == list(state.getTransitions().values()):
+                allTraps.append(state)
+        return allTraps
+
+    #
     # Mutators
     #
 

@@ -24,7 +24,7 @@ class DFAState:
             return self
         else:
             try:
-                result = self.myTransitions[character]
+                result = self.getTransitions()[character]
             except KeyError:
                 print(f"\n\nError: Transition not defined for {character} " + \
                         f"from state {self.getName()}\n\n")
@@ -42,12 +42,15 @@ class DFAState:
     def getName(self):
         return self.name
 
+    def getTransitions(self):
+        return self.myTransitions
+
     def toString(self, brief=True):
         if brief:
-            return f"State: {self.getName()} {'Accepting' if self.isAccepting() else 'Rejecting'}"
+            return f"State: {self.getName()}"
         else:
             details = f"State {self.getName()} {'Accepting' if self.isAccepting() else 'Rejecting'}\n"
-            for key, value in self.myTransitions.items():
+            for key, value in self.getTransitions().items():
                 details += f'{key} -> {value.getName()}\n'
             return details
     #

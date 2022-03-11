@@ -37,7 +37,7 @@ def drawDFA(machine):
         ### same state for different transitions
         ###
         for key, values in optimizedValKey.items():
-            print(f"{id(state)} -> {key} [label={','.join(values)}];")
+            print(f'{id(state)} -> {key} [label="{",".join(values)}"];')
 
     print("}")
 

@@ -9,7 +9,7 @@ own test but this is a simple example.
 
 **This implementation is a toy project.**
 
-If you're looking for something more robust, consider works:
+If you're looking for something more robust, consider other works:
 maybe something like [this](https://github.com/mvcisback/dfa) 
 
 

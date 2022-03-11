@@ -8,17 +8,12 @@ def drawDFA(machine):
     ### Transitions for states
     ###
 
-    # create a map between states ids and names
-    mapIdName = {}
-    for state in states:
-        mapIdName[id(state)] = state.getName()
-
     for state in states:
         myName = state.getName()
 
         # Label for state
-        print(f'{id(state)} [label="{myName}"];')
-        print(f'{id(state)} [shape="{"doublecircle" if state.isAccepting() else "circle"}"];')
+        print(f'{myName} [label="{myName}"];')
+        print(f'{myName} [shape="{"doublecircle" if state.isAccepting() else "circle"}"];')
         
         my_transitions = state.getTransitions()
 
@@ -27,7 +22,7 @@ def drawDFA(machine):
         sanitized_transitions = {}
 
         for char in my_transition_chars:
-           sanitized_transitions[char] = id(my_transitions[char])
+           sanitized_transitions[char] = my_transitions[char].getName()
 
         # optimized valKey
         optimizedValKey = optimize(sanitized_transitions)
@@ -37,7 +32,7 @@ def drawDFA(machine):
         ### same state for different transitions
         ###
         for key, values in optimizedValKey.items():
-            print(f'{id(state)} -> {key} [label="{",".join(values)}"];')
+            print(f'{myName} -> {key} [label="{",".join(values)}"];')
 
     print("}")
 

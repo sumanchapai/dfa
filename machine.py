@@ -1,10 +1,10 @@
 from dfa import DFA
 from dfaState import DFAState
 
-eAeB = DFAState("even A even B", False) 
-eAoB = DFAState("even A odd B", False) 
-oAoB = DFAState("odd A odd B", False) 
-oAeB = DFAState("odd A even B", True) 
+eAeB = DFAState("eAeB", False) 
+eAoB = DFAState("eAoB", False) 
+oAoB = DFAState("oAoB", False) 
+oAeB = DFAState("oAeB", True) 
 
 #
 # transitions

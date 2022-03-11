@@ -18,6 +18,7 @@ def drawDFA(machine):
 
         # Label for state
         print(f'{id(state)} [label="{myName}"];')
+        print(f'{id(state)} [shape="{"doublecircle" if state.isAccepting() else "circle"}"];')
         
         my_transitions = state.getTransitions()
 

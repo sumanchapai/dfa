@@ -2,8 +2,10 @@
 
 A simple DFA simulator in Python
 
-For usage, see [test.py](./test.py). Note that this file isn't a test file 
-for for code but an example of its usage.
+For usage, see **[machine.py](./machine.py)** that shows how to build a 
+DFA machine. There is also a test file to see how you can check what the 
+machine accepts and what it doesn't. Basically, you need to write your 
+own test but this is a simple example.
 
 **This implementation is a toy project.**
 

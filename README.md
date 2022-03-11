@@ -24,3 +24,5 @@ tool can use to draw the graph. Obviously, you need to have
 
 You're intended to manipulate `dot` file as your needs. What this 
 module provides is merely an absolute toy.
+
+To see what kind of `dot` file is generated, see [machine1.dot](./machine1.dot).

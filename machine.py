@@ -26,9 +26,6 @@ oAoB.addTransition(oAeB, 'b')
 oAeB.addTransition(eAeB, 'a')
 oAeB.addTransition(oAoB, 'b')
 
-# oAeB.addTransition(oAeB, 'a')
-# oAeB.addTransition(oAeB, 'b')
-
 
 # Machine
 machine = DFA("oddA evenB", \
